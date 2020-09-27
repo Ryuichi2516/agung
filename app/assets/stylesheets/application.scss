@@ -1,0 +1,27 @@
+@import "reset";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "index";
+
+
+body {
+  background-color: #FFFAF0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a :hover {
+  opacity: 0.5;
+}
+
+li :hover {
+  opacity: 0.5;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}

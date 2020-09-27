@@ -1,69 +1,153 @@
 %header
   .inner-header
-    = link_to "#",class:"inner-header__logo" do
-      %h1 agung
-    .inner-header__search
-      .search-form
-      .search-icon
-    .inner-header__right-cell
-      %ul
-        %li ログイン
-        %li マイアカウント
-        %li 新規会員登録
-        %li カート
-    .inner-header__guide-nav
-      %ul
-        %li Category
-        %li New
-        %li Sale
+    .inner-header__left
+      = link_to "#", class:"inner-header__left__logo" do
+        %h1 Agung
+    .inner-header__right
+      %ul.inner-header__right__user
+        %li
+          = link_to "#" do
+            %i.fab.fa-facebook
+        %li
+          = link_to "#" do
+            %i.fab.fa-instagram
+        %li
+          = link_to "#" do
+            %i.fab.fa-twitter
+        %li
+          = link_to "Login", "#"
+        %li
+          = link_to "#" do
+            Sign up
+            %i.far.fa-user 
+      %ul.inner-header__right__guide-nav
+        %li
+          = link_to "Category", "#"
+        %li
+          = link_to "Brand", "#"
+        %li
+          = link_to "New", "#"
+        %li
+          = link_to "Stocklist", "#"
+        %li
+          = link_to "Contact", "#"
+        %li
+          = link_to "Blog", "#"
+        %form
+          %input.search-form
+          %i.fas.fa-search
+          = link_to "#" do
+            %i.fab.fa-gratipay
+          = link_to "#" do
+            %i.fas.fa-cart-arrow-down
+
+
+%image
 
 %info
-  %ul
-    %li
-    %li
+  .new-info
+    %h3 INFO
+    %ul
+      %li 2020.09.04	台風9号、10号による集配への影響について。
+      %li 2020.08.06	夏季休業のお知らせ。
+      %li 2020.05.02	ゴールデンウィーク期間中の配送、お問い合わせに関して。
 
 %main
   %h2.main-title
-    %span ==NEW ARRIVAL==
-  .item-lists
-    %ul
+    %span == NEW ARRIVAL ==
+  .item-new
+    .item-new__first
+      画像
+      %p 商品名
+      %p 値段
+    %ul.item-new__arrival
       %li
-        %table
-          %tbody
-            %tr
-              %td 画像
-            %tr
-              %td 商品名
-            %tr
-              %td 値段
-  .all-item-btn ALL ITEM
+        画像
+        %p 商品名
+        %p 値段
+      %li
+        画像
+        %p 商品名
+        %p 値段
+      %li
+        画像
+        %p 商品名
+        %p 値段
+      %li.break
+        画像
+        %p 商品名
+        %p 値段
+      %li
+        画像
+        %p 商品名
+        %p 値段
+      %li
+        画像
+        %p 商品名
+        %p 値段
+  .all-more
+    = link_to "ALL ITEM", "#", class: "all-more__btn"
 
   %h2.main-title
-    %span ==one item in stock==
-  .item-lists
-    %ul
+    %span == STOCKLIST ==
+  .item-new
+    .item-new__first
+      画像
+      %p 商品名
+      %p 値段
+    %ul.item-new__arrival
       %li
-        %table
-          %tbody
-            %tr
-              %td 画像
-            %tr
-              %td 商品名
-            %tr
-              %td 値段
-  .all-item-btn MORE
+        画像
+        %p 商品名
+        %p 値段
+      %li
+        画像
+        %p 商品名
+        %p 値段
+      %li
+        画像
+        %p 商品名
+        %p 値段
+      %li.break
+        画像
+        %p 商品名
+        %p 値段
+      %li
+        画像
+        %p 商品名
+        %p 値段
+      %li
+        画像
+        %p 商品名
+        %p 値段
+  .all-more
+    = link_to "MORE", "#", class: "all-more__btn"
 
 %footer
-  %ul
-    %li Instagram
-    %li Facebook
-    %li Twitter
-  %ul
-    %li お問い合わせ
-    %li 利用規約
-    %li ショッピングガイド
-    %li プライバシーポリシー
-    %li 特定商取引に基づく表記
+  %ul.footer-logo
+    %li
+      = link_to "#" do
+        %i.fab.fa-facebook
+    %li
+      = link_to "#" do
+        %i.fab.fa-instagram
+    %li
+      = link_to "#" do
+        %i.fab.fa-twitter
+  %ul.footer-cell
+    %li
+      = link_to "Home", "#"
+    %li
+      = link_to "Contact", "#"
+    %li
+      = link_to "Terms & Conditions", "#"
+    %li
+      = link_to "Guide", "#"
+    %li
+      = link_to "Privacy and cookies policy", "#"
+    %li
+      = link_to "特定商取引に基づく表記", "#"
+  %p Copyright © 2020 agung. All rights Reserved.【掲載記事・写真・イラストなどの無断複写・転載を禁じます。】
 
 .Inquiry-form
 
