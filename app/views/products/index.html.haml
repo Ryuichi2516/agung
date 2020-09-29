@@ -15,10 +15,8 @@
           = link_to "#" do
             %i.fab.fa-twitter
         %li
-          = link_to "Login", "#"
-        %li
-          = link_to "#" do
-            Sign up
+          = link_to new_user_session_path do
+            Login / Register
             %i.far.fa-user 
       %ul.inner-header__right__guide-nav
         %li
@@ -28,7 +26,7 @@
         %li
           = link_to "New", "#"
         %li
-          = link_to "Stocklist", "#"
+          = link_to "StockItems", "#"
         %li
           = link_to "Contact", "#"
         %li
@@ -89,7 +87,7 @@
     = link_to "ALL ITEM", "#", class: "all-more__btn"
 
   %h2.main-title
-    %span == STOCKLIST ==
+    %span == STOCK ITEMS ==
   .item-new
     .item-new__first
       画像
