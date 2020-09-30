@@ -1,0 +1,40 @@
+%header
+  .inner-header
+    .inner-header__left
+      = link_to root_path, class:"inner-header__left__logo" do
+        %h1 Agung
+    .inner-header__right
+      %ul.inner-header__right__user
+        %li
+          = link_to "#" do
+            %i.fab.fa-facebook
+        %li
+          = link_to "#" do
+            %i.fab.fa-instagram
+        %li
+          = link_to "#" do
+            %i.fab.fa-twitter
+        %li
+          = link_to new_user_session_path do
+            Login / Register
+            %i.far.fa-user 
+      %ul.inner-header__right__guide-nav
+        %li
+          = link_to "Category", "#"
+        %li
+          = link_to "Brand", "#"
+        %li
+          = link_to "New", "#"
+        %li
+          = link_to "StockItems", "#"
+        %li
+          = link_to "Contact", "#"
+        %li
+          = link_to "Blog", "#"
+        %form
+          %input.search-form
+          %i.fas.fa-search
+          = link_to "#" do
+            %i.fab.fa-gratipay
+          = link_to "#" do
+            %i.fas.fa-cart-arrow-down

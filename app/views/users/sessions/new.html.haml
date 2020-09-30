@@ -1,19 +1,33 @@
-%h2 Customer Login
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-.new-register
-  New Customers
-= render "users/shared/links"
+= render "modules/header"
+
+%main
+  .maincontent
+    %form.maincontent__login-content
+      %h2.title Customer Login
+      %h3.subtitle (会員の方)
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .field
+          = f.email_field :email, autofocus: true, autocomplete: "email", class: "field__form", placeholder: "E-mail address"
+        .field
+          = f.password_field :password, autocomplete: "current-password", class: "field__form", placeholder: "Password"
+        = check_box_tag :check
+        = label_tag :check, "パスワードを表示する", class: "checkbox"
+        - if devise_mapping.rememberable?
+          .field
+            = f.check_box :remember_me
+            = f.label :remember_me, "次回からの入力を省略する", class: "checkbox"
+        .login
+          = f.submit "ログインする", class: "login__btn"
+        = render "users/shared/links"
+    %form.maincontent__new-customer-content
+      %h2.title New Customers
+      %h3.subtitle (新規会員登録)
+      %p 
+        無料の会員登録を行って頂くと、お届け先住所を保存ができ大変便利です。
+        また、会員限定のお得な最新情報も受け取ることができます。
+      %br
+      .new-customer
+        = link_to "会員登録をする", new_user_registration_path, class: "new-customer__btn"
+
+= render "modules/footer"
+

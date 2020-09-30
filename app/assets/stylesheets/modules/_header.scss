@@ -1,0 +1,61 @@
+header {
+  position: fixed;
+  background-color: #FFFAF0;
+  width: 100%;
+  z-index: 1;
+  border-bottom: solid #ccc 1px;  
+  .inner-header {
+    display: flex;
+    height: 100px;
+    padding: 0px 100px;
+    &__left {
+      font-family: 'Zapfino',sans-serif;
+      font-size: 60px;
+      line-height: 100px;
+      &__logo {
+        color:	#CD853F;
+      }
+    }
+    &__right {
+      width: 100%;
+      padding: 20px;
+      font-size: 16px;
+      color: #000;
+      &__user {
+        display: flex;
+        justify-content: flex-end;
+        li {
+          margin-right: 20px;
+          .fab {
+            font-size: 20px;
+          }
+        }
+      }
+      &__guide-nav {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+        li {
+          margin-right: 30px;
+        }
+        .search-form {
+          border-bottom: 1px solid #cccccc;
+          border-right: none;
+          border-left: none;
+          border-top: none;
+          border-radius: 0px;
+          background-color: #FFFAF0;
+          outline: 0;
+        }
+        .fas {
+          margin-right: 20px;
+          font-size: 20px;
+        }
+        .fab {
+          margin-right: 20px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
