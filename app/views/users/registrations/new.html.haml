@@ -1,7 +1,7 @@
 = render "modules/header"
 
 %main
-  %form.accountContent
+  .accountContent
     %h2.title 会員情報登録
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       = render "users/shared/error_messages", resource: resource
