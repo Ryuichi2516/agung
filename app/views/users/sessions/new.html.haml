@@ -2,7 +2,7 @@
 
 %main
   .maincontent
-    %form.maincontent__login-content
+    %form.maincontent__loginContent
       %h2.title Customer Login
       %h3.subtitle (会員の方)
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
@@ -19,15 +19,15 @@
         .login
           = f.submit "ログインする", class: "login__btn"
         = render "users/shared/links"
-    %form.maincontent__new-customer-content
+    %form.maincontent__newCustomerContent
       %h2.title New Customers
       %h3.subtitle (新規会員登録)
       %p 
         無料の会員登録を行って頂くと、お届け先住所を保存ができ大変便利です。
         また、会員限定のお得な最新情報も受け取ることができます。
       %br
-      .new-customer
-        = link_to "会員登録をする", new_user_registration_path, class: "new-customer__btn"
+      .newCustomer
+        = link_to "会員登録をする", new_user_registration_path, class: "newCustomer__btn"
 
 = render "modules/footer"
 

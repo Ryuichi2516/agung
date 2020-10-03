@@ -4,7 +4,7 @@
   width: 900px;
   margin: 0px auto;
   display: flex;
-  &__login-content {
+  &__loginContent {
     width: 350px;
     height: 350px;
     border-right: solid #ccc 1px;
@@ -19,9 +19,9 @@
     .field {
       margin-bottom: 25px;
       &__form {
-        width: 350px;
+        width: 338px;
         height: 30px;
-        padding: 0px 10px;
+        padding-left: 10px;
         font-size: 12px;
         border: solid #ccc 1px;
         border-radius: 4px;
@@ -37,7 +37,7 @@
         opacity: 0.5;
       }
       &__btn {
-        width: 370px;
+        width: 350px;
         height: 30px;
         background-color: #000000;
         color: #ffffff;
@@ -51,7 +51,7 @@
     }
   }
 
-  &__new-customer-content {
+  &__newCustomerContent {
     width: 350px;
     padding: 0px 50px;
     .title {
@@ -64,7 +64,7 @@
     p {
       font-size: 13px;
     }
-    .new-customer{
+    .newCustomer{
       & :hover {
         opacity: 0.5;
       }
@@ -74,7 +74,7 @@
         display: block;
         border: solid #000000 1px;
         border-radius: 4px;
-        width: 368px;
+        width: 348px;
         height: 28px;
       }
     }

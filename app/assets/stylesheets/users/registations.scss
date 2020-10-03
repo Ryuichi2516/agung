@@ -1,0 +1,82 @@
+.accountContent {
+  padding-top: 150px;
+  min-height: 500px;
+  width: 700px;
+  margin: 0px auto;
+  .title {
+    text-align: center;
+    font-size: 25px;
+  }
+  .accountForm {
+    padding: 50px 100px;
+    .fieldEmail {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      line-height: 30px;
+      &__input {
+        width: 338px;
+        height: 30px;
+        padding-left: 10px;
+        font-size: 12px;
+        border: solid #ccc 1px;
+        border-radius: 4px;
+        outline: 0;
+        display: block;
+      }
+    }
+    .required {
+      margin: 0px 0px 2px 150px;
+      font-size: 10px;
+      height: 20px;
+      width: 30px;
+      background-color: #AA0000;
+      line-height: 20px;
+      border-radius: 4px;
+      color: #ffffff;
+    }
+    .fieldGuide {
+      margin: 0px 0px 25px 150px;
+      font-size: 13px;
+    }
+    .fieldPassword {
+      display: flex;
+      justify-content: space-between;
+      line-height: 30px;
+      &__input {
+        width: 338px;
+        height: 30px;
+        padding-left: 10px;
+        font-size: 12px;
+        border: solid #ccc 1px;
+        border-radius: 4px;
+        outline: 0;
+        display: block;
+      }
+    }
+    .checkField {
+      margin-left: 150px;
+      padding-left: 10px;
+      .checkbox {
+        font-size: 13px;
+        padding-left: 10px;
+      }
+    }
+    .sign_up {
+      & :hover {
+        opacity: 0.5;
+      }
+      &__btn {
+        width: 350px;
+        height: 30px;
+        background-color: #000000;
+        color: #ffffff;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        margin: 60px auto 0px;
+        display: block;
+      }
+    }
+  }
+}
