@@ -10,14 +10,10 @@
   .deliveryAddressForm {
     padding: 40px 100px 50px;
     .required {
-      margin: 10px 0px 2px 150px;
-      font-size: 10px;
-      height: 20px;
-      width: 30px;
-      background-color: #AA0000;
-      line-height: 20px;
-      border-radius: 4px;
-      color: #ffffff;
+      @include terms(#AA0000, #ffffff);
+    }
+    .option {
+      @include terms(#808080, #EEEEEE);
     }
     .fieldGuide {
       margin: 0px 0px 25px 150px;
@@ -37,6 +33,15 @@
         outline: 0;
         display: block;
       }
+      &__selector {
+        width: 350px;
+        height: 32px;
+        padding-left: 10px;
+        font-size: 12px;
+        border: solid #ccc 1px;
+        border-radius: 4px;
+        outline: 0;
+      }
       &__name {
         width: 350px;
         height: 30px;
@@ -53,7 +58,7 @@
         }
       }
     }
-    .sign_up {
+    .register {
       & :hover {
         opacity: 0.5;
       }

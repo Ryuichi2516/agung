@@ -1,0 +1,10 @@
+@mixin terms($background-color, $color){
+  margin: 10px 0px 2px 150px;
+  font-size: 10px;
+  height: 20px;
+  width: 30px;
+  background-color: $background-color;
+  line-height: 20px;
+  border-radius: 4px;
+  color: $color;
+}
