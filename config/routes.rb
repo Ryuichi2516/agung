@@ -9,4 +9,7 @@ Rails.application.routes.draw do
     get "user/:id", :to => "users/registrations#detail"
     get "logout", :to => "users/sessions#destroy"
   end
+
+  resources :delivery_addresses, only: [:new, :create]
+
 end
