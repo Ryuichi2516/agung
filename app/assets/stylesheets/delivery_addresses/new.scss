@@ -7,6 +7,10 @@
     text-align: center;
     font-size: 25px;
   }
+  .skip {
+    width: 100%;
+    text-align: center;
+  }
   .deliveryAddressForm {
     padding: 40px 100px 50px;
     .required {
@@ -73,6 +77,11 @@
         margin: 60px auto 0px;
         display: block;
       }
+    }
+    .skip {
+      width: 100%;
+      display: block;
+      text-align: center;
     }
   }
 }

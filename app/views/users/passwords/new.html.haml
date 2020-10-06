@@ -1,10 +1,20 @@
-%h2 Forgot your password?
-= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-  = render "users/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .actions
-    = f.submit "Send me reset password instructions"
-= render "users/shared/links"
+= render "modules/header"
+
+%main
+  .resetContent
+    = render "users/shared/error_messages", resource: resource
+    %h2.title Password Reset
+    %h3.subtitle (パスワード再設定)
+    .resetForm
+      = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+        .resetGuide
+          ご登録のメールアドレスを入力してください。
+          %br
+          数分後に新しいパスワードをお送りいたします。
+        .resetEmail
+          = f.email_field :email, autofocus: true, autocomplete: "email", class: "resetEmail__input", placeholder: "メールアドレス"
+        .btns
+          = f.submit "送信する", class: "btns__send"
+          = link_to "トップページ", "root_path"
+
+= render "modules/footer"

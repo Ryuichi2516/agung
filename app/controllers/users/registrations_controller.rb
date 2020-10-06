@@ -5,11 +5,21 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   def new
-    super
+    @user = User.new
   end
 
   def create
-    super
+    @user = User.new(sign_up_params)
+    unless @user.valid?
+      render :new and return
+    end
+    @user.save
+    sign_in(:user, @user)
+    redirect_to new_delivery_address_path
+  end
+
+  def sign_up
+    redirect_to new_user_registration_path
   end
 
   # GET /resource/edit

@@ -4,13 +4,17 @@ class DeliveryAddressesController < ApplicationController
   end
 
   def create
-    DeliveryAddress.create(DeliveryAddress_params)
+    @DeliveryAddress = DeliveryAddress.new(delivery_address_params)
+    unless @DeliveryAddress.valid?
+      render :new and return
+    end
+    @DeliveryAddress.save
+    redirect_to root_path
   end
 
   private
-  def DeliveryAddress_params
-    params.require(:DeliveryAddress)
-    .permit(
+  def delivery_address_params
+    params.require(:delivery_address).permit(
       :first_name,
       :last_name,
       :phonetic_first_name,
@@ -20,8 +24,7 @@ class DeliveryAddressesController < ApplicationController
       :city,
       :ward,
       :building,
-      :phone_number,
-      :user_id
-    )
+      :phone_number)
+      .merge(user_id: current_user.id)
   end
 end
