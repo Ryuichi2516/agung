@@ -12,6 +12,6 @@ Rails.application.routes.draw do
     get "users", to: "users/registrations#sign_up"
   end
 
-  resources :delivery_addresses, only: [:new, :create]
+  resources :delivery_addresses, only: [:index, :new, :create]
 
 end

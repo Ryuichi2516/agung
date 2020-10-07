@@ -1,4 +1,9 @@
 class DeliveryAddressesController < ApplicationController
+
+  def index
+    redirect_to new_delivery_address_path
+  end
+
   def new
     @DeliveryAddress = DeliveryAddress.new
   end
