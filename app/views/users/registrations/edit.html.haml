@@ -8,41 +8,44 @@
   = render "modules/sidebar"
 
   .mypageContent
-    %h2
-      ご依頼主（会員様）
+    = render "users/shared/error_messages", resource: resource
+    %h2 ご依頼主（会員様）
+    %br/
     = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
-      = render "users/shared/error_messages", resource: resource
-      .field
-        = f.label :email
+      .accountForm
+        .required &ensp;必須
+        .fieldEmail
+          = f.label :email
+          = f.email_field :email, autofocus: true, autocomplete: "email", class: "fieldEmail__input", placeholder: "PC・携帯どちらでも可"
+        .required &ensp;必須
+        .fieldPassword.current
+          = f.label :current_password
+          = f.password_field :current_password, autocomplete: "current-password", class: "fieldPassword__input"
+        .option &ensp;任意
+        .fieldPassword
+          = f.label :password, "新しいパスワード"
+          = f.password_field :password, autocomplete: "new-password", class: "fieldPassword__input", placeholder: "変更する場合のみ入力して下さい"
+        .fieldGuide &ensp;＊ 半角英数字７文字以上で設定して下さい
+        .option &ensp;任意
+        .fieldPassword
+          = f.label :password_confirmation, "新しいパスワード(確認用)"
+          = f.password_field :password_confirmation, autocomplete: "new-password", class: "fieldPassword__input", placeholder: "変更する場合のみ入力して下さい"
+        .checkField
+          = check_box_tag :check
+          = label_tag :check, "パスワードを表示する", class: "checkbox"
+      .update
+        = f.submit "更新する", class:"update__btn"
         %br/
-        = f.email_field :email, autofocus: true, autocomplete: "email"
-      - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-        %div
-          Currently waiting confirmation for: #{resource.unconfirmed_email}
-      .field
-        = f.label :password
-        %i (leave blank if you don't want to change it)
+        = link_to "マイアカウント TOPへ", :back, class:"update__link"
         %br/
-        = f.password_field :password, autocomplete: "new-password"
-        - if @minimum_password_length
-          %br/
-          %em
-            = @minimum_password_length
-            characters minimum
-      .field
-        = f.label :password_confirmation
-        %br/
-        = f.password_field :password_confirmation, autocomplete: "new-password"
-      .field
-        = f.label :current_password
-        %i (we need your current password to confirm your changes)
-        %br/
-        = f.password_field :current_password, autocomplete: "current-password"
-      .actions
-        = f.submit "Update"
-    %h3 Cancel my account
-    %p
-      Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
-    = link_to "My Account Top", :back
+        = link_to "※退会の手続きはこちら", "#", class:"update__link"
+
 
 = render "modules/footer"
+
+
+
+
+
+%p
+  #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}

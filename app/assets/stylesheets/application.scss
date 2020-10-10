@@ -6,11 +6,12 @@
 @import "modules/footer";
 @import "products/index";
 @import "users/sessions";
-@import "users/registations";
+@import "users/registations/new.scss";
 @import "users/passwords";
 @import "delivery_addresses/new";
-@import "users/detail.scss";
+@import "users/registations/detail.scss";
 @import "modules/sidebar";
+@import "users/registations/edit.scss";
 
 
 
