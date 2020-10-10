@@ -1,10 +1,10 @@
 %header
-  .inner-header
-    .inner-header__left
-      = link_to root_path, class:"inner-header__left__logo" do
+  .innerHeader
+    .innerHeader__left
+      = link_to root_path, class:"innerHeader__left__logo" do
         %h1 Agung
-    .inner-header__right
-      %ul.inner-header__right__user
+    .innerHeader__right
+      %ul.innerHeader__right__user
         %li
           = link_to "#" do
             %i.fab.fa-facebook
@@ -16,7 +16,7 @@
             %i.fab.fa-twitter
         - if user_signed_in?
           %li
-            = link_to "user/#{current_user.id}" do
+            = link_to user_path(current_user) do
               %i.far.fa-user
           %li
             = link_to destroy_user_session_path, method: :delete do
@@ -27,7 +27,7 @@
             = link_to new_user_session_path do
               Login / Register
               %i.far.fa-user 
-      %ul.inner-header__right__guide-nav
+      %ul.innerHeader__right__guide-nav
         %li
           = link_to "Category", "#"
         %li
@@ -41,7 +41,7 @@
         %li
           = link_to "Blog", "#"
         %form
-          %input.search-form
+          %input.searchForm
           %i.fas.fa-search
           = link_to "#" do
             %i.fab.fa-gratipay

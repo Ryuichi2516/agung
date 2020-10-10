@@ -8,22 +8,15 @@
 .mypage {
   display: flex;
   width: 750px;
-  min-height: 750px;
+  min-height: 500px;
   margin: 0px auto;
-}
-.mypageNav {
-  margin-right: 50px;
-  &__list {
-    width: 150px;
-    .mypageNav__list-item {
-      display: flex;
-      justify-content: space-between;
-      .fas {
-      }
+  .mypageContent__list{
+    padding-bottom: 30px;
+    .listDetail {
+      text-decoration: underline;
+    }
+    p {
+      font-size: 13px;
     }
   }
-}
-
-.my {
-  line-height: 50px;
 }

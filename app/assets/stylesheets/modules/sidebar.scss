@@ -1,0 +1,20 @@
+.mypageNav {
+  margin-right: 80px;
+  &__list {
+    width: 180px;
+    .listItem {
+      position: relative;
+      display: block;
+      padding: 10px 0px;
+      border: solid #cccccc;
+      border-width: 1px 0px 0px 0px;
+      font-size: 13px;
+      .fas {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+}

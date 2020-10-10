@@ -10,6 +10,9 @@
   .skip {
     width: 100%;
     text-align: center;
+    .skipLink {
+      text-decoration: underline;
+    }
   }
   .deliveryAddressForm {
     padding: 40px 100px 50px;

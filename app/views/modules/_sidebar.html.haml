@@ -1,0 +1,26 @@
+.mypageNav
+  %ul.mypageNav__list
+    %li
+      = link_to user_path(current_user), class: "listItem" do
+        マイページ
+        %i.fas.fa-angle-right
+    %li
+      =link_to "#", class: "listItem" do
+        お気に入りリスト
+        %i.fas.fa-angle-right
+    %li
+      =link_to "#", class: "listItem" do
+        ご注文履歴
+        %i.fas.fa-angle-right
+    %li
+      =link_to edit_user_registration_path, class: "listItem" do
+        お客様情報の確認・変更
+        %i.fas.fa-angle-right
+    %li
+      =link_to "#", class: "listItem" do
+        お届け先住所追加・変更
+        %i.fas.fa-angle-right
+    %li
+      =link_to "#", class: "listItem" do
+        お問い合わせ
+        %i.fas.fa-angle-right

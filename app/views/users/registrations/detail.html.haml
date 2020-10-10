@@ -1,46 +1,32 @@
 = render "modules/header"
 
-
 .titleBox
   %h2.title My Account
-  %h3.subtitle (マイアカウント)
+  %h3.subtitle (マイ アカウント)
 
 %main.mypage
-  .mypageNav
-    %ul.mypageNav__list
-      %li.my
-        = link_to "#", class: "mypageNav__list-item" do
-          マイページ
-          %i.fas.fa-angle-right
-      %li
-        =link_to "#", class: "mypageNav__list-item" do
-          下記き一覧
-          %i.fas.fa-angle-right
-      %li
-        =link_to "#", class: "mypageNav__list-item" do
-          ご注文履歴
-          %i.fas.fa-angle-right
-      %li
-        =link_to "#", class: "mypageNav__list-item" do
-          ガイド
-          %i.fas.fa-angle-right
-      %li
-        =link_to "#", class: "mypageNav__list-item" do
-          お問い合わせ
-          %i.fas.fa-angle-right
+  = render "modules/sidebar"
 
   .mypageContent
-    .accountForm
-      .required &ensp;必須
-      .fieldEmail
-      .required &ensp;必須
-      .fieldPassword
-      .fieldGuide &ensp;＊ 半角英数字７文字以上で設定して下さい
-      .required &ensp;必須
-      .fieldPassword
-      .checkField
-        = check_box_tag :check
-        = label_tag :check, "パスワードを表示する", class: "checkbox"
-      .sign_up
+    %ul
+      .mypageContent__list
+        %li
+          =link_to "お気に入りリスト", "#", class: "listDetail"
+      .mypageContent__list
+        %li
+          =link_to "ご注文履歴", "#", class: "listDetail"
+        %p &ensp;ご注文内容の詳細や、配送状況の確認、再購入
+      .mypageContent__list
+        %li
+          =link_to "お客様情報の確認・変更", "#", class: "listDetail"
+        %p &ensp;メールアドレス・パスワードなどお客様情報の確認・変更
+      .mypageContent__list
+        %li
+          =link_to "お届け先住所追加・変更", "#", class: "listDetail"
+        %p &ensp;ご注文に便利な住所リストの追加・編集・削除
+      .mypageContent__list
+        %li
+          =link_to "お問い合わせ", "#", class: "listDetail"
+        %p &ensp;当ショップへの質問や商品についてのご質問
 
 = render "modules/footer"

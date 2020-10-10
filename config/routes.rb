@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   root 'products#index'
 
   devise_scope :user do
-    get "user/:id", to: "users/registrations#detail"
     get "logout", to: "users/sessions#destroy"
     get "users", to: "users/registrations#sign_up"
+    get "user/:id", to: "users/registrations#detail", as: :user
   end
 
   resources :delivery_addresses, only: [:index, :new, :create]

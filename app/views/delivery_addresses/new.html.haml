@@ -6,7 +6,7 @@
     %h2.title お届け先住所
     .skip
       %span ※
-      = link_to "Skip", root_path, class: "skip"
+      = link_to "Skip", root_path, class: "skipLink"
       %span する
     = form_with model: @DeliveryAddress, local: true do |f|
       .deliveryAddressForm
