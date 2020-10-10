@@ -1,0 +1,46 @@
+= render "modules/header"
+
+
+.titleBox
+  %h2.title My Account
+  %h3.subtitle (マイアカウント)
+
+%main.mypage
+  .mypageNav
+    %ul.mypageNav__list
+      %li.my
+        = link_to "#", class: "mypageNav__list-item" do
+          マイページ
+          %i.fas.fa-angle-right
+      %li
+        =link_to "#", class: "mypageNav__list-item" do
+          下記き一覧
+          %i.fas.fa-angle-right
+      %li
+        =link_to "#", class: "mypageNav__list-item" do
+          ご注文履歴
+          %i.fas.fa-angle-right
+      %li
+        =link_to "#", class: "mypageNav__list-item" do
+          ガイド
+          %i.fas.fa-angle-right
+      %li
+        =link_to "#", class: "mypageNav__list-item" do
+          お問い合わせ
+          %i.fas.fa-angle-right
+
+  .mypageContent
+    .accountForm
+      .required &ensp;必須
+      .fieldEmail
+      .required &ensp;必須
+      .fieldPassword
+      .fieldGuide &ensp;＊ 半角英数字７文字以上で設定して下さい
+      .required &ensp;必須
+      .fieldPassword
+      .checkField
+        = check_box_tag :check
+        = label_tag :check, "パスワードを表示する", class: "checkbox"
+      .sign_up
+
+= render "modules/footer"

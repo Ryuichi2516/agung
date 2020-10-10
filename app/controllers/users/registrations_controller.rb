@@ -22,6 +22,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
     redirect_to new_user_registration_path
   end
 
+  def detail
+  end
+
   # GET /resource/edit
   # def edit
   #   super

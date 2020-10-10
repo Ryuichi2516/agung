@@ -16,10 +16,10 @@
             %i.fab.fa-twitter
         - if user_signed_in?
           %li
-            = link_to "#" do
+            = link_to "user/#{current_user.id}" do
               %i.far.fa-user
           %li
-            = link_to  destroy_user_session_path, method: :delete do
+            = link_to destroy_user_session_path, method: :delete do
               Logout
               %i.fas.fa-sign-out-alt
         - else 
