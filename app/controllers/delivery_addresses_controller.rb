@@ -14,7 +14,7 @@ class DeliveryAddressesController < ApplicationController
       render :new and return
     end
     @DeliveryAddress.save
-    redirect_to root_path
+    redirect_to user_path(current_user)
   end
 
   private

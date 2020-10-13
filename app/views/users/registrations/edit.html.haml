@@ -1,7 +1,7 @@
 = render "modules/header"
 
 .titleBox
-  %h2.title ACCOUNT INFORMATION
+  %h2.title Account Information
   %h3.subtitle (会員情報変更)
 
 %main.mypage
@@ -9,7 +9,7 @@
 
   .mypageContent
     = render "users/shared/error_messages", resource: resource
-    %h2 ご依頼主（会員様）
+    %h2.nickname ご依頼主（会員様）
     %br/
     = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
       .accountForm

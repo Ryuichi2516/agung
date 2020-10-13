@@ -12,6 +12,9 @@
   margin: 0px auto;
   .mypageContent {
     width: 100%;
+    .nickname {
+      font-size: 15px;
+    }
     .fieldEmail {
       display: flex;
       justify-content: space-between;

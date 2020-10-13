@@ -19,10 +19,20 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def sign_up
+    if user_signed_in?
+      redirect_to edit_user_registration_path and return
+    end
     redirect_to new_user_registration_path
   end
 
   def detail
+  end
+
+  def logout
+  end
+
+  def delivery_address
+    @delivery_addresses = DeliveryAddress.where(user_id: current_user.id)
   end
 
   # GET /resource/edit

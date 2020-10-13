@@ -2,7 +2,7 @@
   %ul.mypageNav__list
     %li
       = link_to user_path(current_user), class: "listItem" do
-        マイページ
+        My Account Top
         %i.fas.fa-angle-right
     %li
       =link_to "#", class: "listItem" do
@@ -17,10 +17,18 @@
         お客様情報の確認・変更
         %i.fas.fa-angle-right
     %li
-      =link_to "#", class: "listItem" do
+      =link_to users_delivery_address_path, class: "listItem" do
         お届け先住所追加・変更
         %i.fas.fa-angle-right
     %li
       =link_to "#", class: "listItem" do
+        クレジットカード
+        %i.fas.fa-angle-right
+    %li
+      =link_to "#", class: "listItem" do
         お問い合わせ
+        %i.fas.fa-angle-right
+    %li
+      =link_to destroy_user_session_path, method: :delete, class: "listItem" do
+        ログアウト
         %i.fas.fa-angle-right

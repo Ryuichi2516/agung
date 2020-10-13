@@ -1,0 +1,25 @@
+
+.logoutPage {
+  width: 750px;
+  min-height: 400px;
+  margin: 0px auto;
+  padding-top: 50px;
+  h3 {
+    text-align: center;
+  }
+  .toppageLink {
+    & :hover {
+      opacity: 0.5;
+    }
+    &__btn {
+      text-align: center;
+      color: #000000;
+      display: block;
+      border: solid #000000 1px;
+      border-radius: 4px;
+      width: 348px;
+      height: 28px;
+      margin: 100px auto 0px; 
+    }
+  }
+}

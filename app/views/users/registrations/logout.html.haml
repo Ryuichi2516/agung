@@ -1,0 +1,12 @@
+= render "modules/header"
+
+.titleBox
+  %h2.title Log out
+  %h3.subtitle (ログアウト)
+
+%main.logoutPage
+  %h3 ログアウト完了しました
+  .toppageLink
+    =link_to "トップページへ", root_path, class: "toppageLink__btn"
+
+= render "modules/footer"

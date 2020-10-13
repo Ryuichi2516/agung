@@ -18,12 +18,16 @@
         %p &ensp;ご注文内容の詳細や、配送状況の確認、再購入
       .mypageContent__list
         %li
-          =link_to "お客様情報の確認・変更", "#", class: "listDetail"
+          =link_to "お客様情報の確認・変更", edit_user_registration_path, class: "listDetail"
         %p &ensp;メールアドレス・パスワードなどお客様情報の確認・変更
       .mypageContent__list
         %li
-          =link_to "お届け先住所追加・変更", "#", class: "listDetail"
+          =link_to "お届け先住所追加・変更", users_delivery_address_path, class: "listDetail"
         %p &ensp;ご注文に便利な住所リストの追加・編集・削除
+      .mypageContent__list
+        %li
+          =link_to "クレジットカード", "#", class: "listDetail"
+        %p &ensp;現在登録いただいているクレジットカードの確認、削除
       .mypageContent__list
         %li
           =link_to "お問い合わせ", "#", class: "listDetail"

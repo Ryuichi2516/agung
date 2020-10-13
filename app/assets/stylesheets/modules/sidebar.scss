@@ -6,8 +6,6 @@
       position: relative;
       display: block;
       padding: 10px 0px;
-      border: solid #cccccc;
-      border-width: 1px 0px 0px 0px;
       font-size: 13px;
       .fas {
         position: absolute;
@@ -15,6 +13,13 @@
         top: 50%;
         transform: translate(0, -50%);
       }
+    }
+    li {
+      border: solid #cccccc;
+      border-width: 1px 0px 1px 0px;
+    }
+    li + li {
+      border-top: none;
     }
   }
 }
