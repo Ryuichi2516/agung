@@ -21,13 +21,17 @@
       .deliveryList
         - @delivery_addresses.each do |delivery_address|
           .list
-            = delivery_address.last_name
-            = delivery_address.first_name
-            .address
-              &ensp;
-              = "〒#{delivery_address.postal_code}"
-              &ensp;
-              = "#{delivery_address.prefecture.name}#{delivery_address.city}#{delivery_address.ward}#{delivery_address.building}"
+            .customerInfo 
+              = delivery_address.last_name
+              = delivery_address.first_name
+              .address
+                &ensp;
+                = "〒#{delivery_address.postal_code}"
+                &ensp;
+                = "#{delivery_address.prefecture.name}#{delivery_address.city}#{delivery_address.ward}#{delivery_address.building}"
+            .listBtn
+              = link_to "変更", "#", class:"btn__new"
+              = link_to "削除", "#", class:"btn__new"
       .btn
         = link_to "新しいお届け先を追加する", new_delivery_address_path, class:"btn__newLink"
         = link_to "マイアカウント TOPへ", user_path(current_user), class:"btn__topLink"

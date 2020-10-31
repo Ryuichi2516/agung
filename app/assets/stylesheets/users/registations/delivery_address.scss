@@ -57,6 +57,11 @@
         border-width: 1px 0px 1px 0px;
         padding-left: 10px;
         width: 450px;
+        display: flex;
+        justify-content: space-between;
+        .listBtn {
+          padding-top: 10px;
+        }
       }
       .list + .list {
         border-top: none;
