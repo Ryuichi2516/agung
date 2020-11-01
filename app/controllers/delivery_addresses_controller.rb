@@ -22,7 +22,9 @@ class DeliveryAddressesController < ApplicationController
   end
 
   def update
-  
+    @DeliveryAddress = DeliveryAddress.find(params[:id])
+    @DeliveryAddress.update(delivery_address_params)
+    redirect_to users_delivery_address_path
   end
 
   def destroy
