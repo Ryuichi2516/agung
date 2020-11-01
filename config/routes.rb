@@ -13,6 +13,6 @@ Rails.application.routes.draw do
     get "users/delivery_address", to: "users/registrations#delivery_address"
   end
 
-  resources :delivery_addresses, only: [:index, :new, :create]
+  resources :delivery_addresses, only: [:index, :new, :create, :edit, :update, :destroy]
 
 end

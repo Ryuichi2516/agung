@@ -38,14 +38,7 @@
         %br/
         = link_to "マイアカウント TOPへ", :back, class:"update__link"
         %br/
-        = link_to "※退会の手続きはこちら", "#", class:"update__link"
+        = link_to "退会する", registration_path(resource_name), data: { confirm: "お客様情報の全て消えます。退会して問題ありませんか？" }, method: :delete, class:"update__link"
 
 
 = render "modules/footer"
-
-
-
-
-
-%p
-  #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}

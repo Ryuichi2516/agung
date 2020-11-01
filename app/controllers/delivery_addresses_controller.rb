@@ -17,6 +17,22 @@ class DeliveryAddressesController < ApplicationController
     redirect_to user_path(current_user)
   end
 
+  def edit
+    @DeliveryAddress = DeliveryAddress.find(params[:id])
+  end
+
+  def update
+  
+  end
+
+  def destroy
+    delivery_address = DeliveryAddress.find(params[:id])
+    delivery_address.destroy
+    redirect_to users_delivery_address_path
+  end
+
+  
+
   private
   def delivery_address_params
     params.require(:delivery_address).permit(
