@@ -25,7 +25,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     redirect_to new_user_registration_path
   end
 
-  def detail
+  def user
+  end
+
+  def admin
   end
 
   def logout

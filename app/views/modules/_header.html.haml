@@ -17,7 +17,7 @@
         - if user_signed_in?
           - if current_user.admin?
             %li
-              = link_to "#" do
+              = link_to admin_path do
                 管理者
                 %i.fas.fa-user-cog
               = link_to destroy_user_session_path, method: :delete do
