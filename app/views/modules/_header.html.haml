@@ -15,14 +15,23 @@
           = link_to "#" do
             %i.fab.fa-twitter
         - if user_signed_in?
-          %li
-            = link_to user_path(current_user) do
-              %i.far.fa-user
-          %li
-            = link_to destroy_user_session_path, method: :delete do
-              Logout
-              %i.fas.fa-sign-out-alt
-        - else 
+          - if current_user.admin?
+            %li
+              = link_to "#" do
+                管理者
+                %i.fas.fa-user-cog
+              = link_to destroy_user_session_path, method: :delete do
+                Logout
+                %i.fas.fa-sign-out-alt
+          - else
+            %li
+              = link_to user_path(current_user) do
+                %i.far.fa-user
+            %li
+              = link_to destroy_user_session_path, method: :delete do
+                Logout
+                %i.fas.fa-sign-out-alt
+        - else
           %li
             = link_to new_user_session_path do
               Login / Register
