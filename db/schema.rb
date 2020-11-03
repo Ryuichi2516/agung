@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_01_051822) do
+ActiveRecord::Schema.define(version: 2020_11_02_233922) do
 
   create_table "delivery_addresses", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "first_name", null: false
@@ -28,6 +28,23 @@ ActiveRecord::Schema.define(version: 2020_11_01_051822) do
     t.datetime "updated_at", null: false
     t.index ["prefecture_id"], name: "index_delivery_addresses_on_prefecture_id"
     t.index ["user_id"], name: "index_delivery_addresses_on_user_id"
+  end
+
+  create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "description", null: false
+    t.integer "price", null: false
+    t.integer "quantity", null: false
+    t.bigint "brand_id", null: false
+    t.bigint "stock_id", null: false
+    t.bigint "category_id"
+    t.bigint "shipment_date_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_products_on_brand_id"
+    t.index ["category_id"], name: "index_products_on_category_id"
+    t.index ["shipment_date_id"], name: "index_products_on_shipment_date_id"
+    t.index ["stock_id"], name: "index_products_on_stock_id"
   end
 
   create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

@@ -5,7 +5,10 @@
     = render "users/shared/error_messages", resource: @DeliveryAddress
     %h2.title お届け先住所
     .skip
-      %span ※住所登録は後からでも可
+      %span ※住所登録は後からでも可能。
+      %p ⬇️
+      %p
+        = link_to "Topページへ", root_path, class: "skip"
     = form_with model: @DeliveryAddress, local: true do |f|
       .deliveryAddressForm
         .required &ensp;必須
