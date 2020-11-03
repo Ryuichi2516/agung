@@ -6,9 +6,8 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.integer :price, null: false
       t.integer :quantity, null: false
       t.references :brand, null: false
-      t.references :stock, null: false
+      t.boolean :stock, default: false, null: false
       t.references :category
-      t.references :shipment_date, null: false
       t.timestamps
     end
   end
