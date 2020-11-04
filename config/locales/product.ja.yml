@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    models:
+      product: 商品
+    attributes:
+      product:
+        name: お名前(全角)ファーストネーム
+        description: お名前(全角)ラストネーム
+        price: お名前(カナ)ファーストネーム
+        quantity: お名前(カナ)ラストネーム
+        brand: 郵便番号
+        stock: 都道府県
+        category: 市区町村
