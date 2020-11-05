@@ -16,25 +16,31 @@
           = f.text_field :city, class: "fieldForm__input"
         .fieldForm
           = f.label :description, "商品コメント"
-          = f.text_field :city, class: "fieldForm__input"
+          = f.text_area :city, size: "30x10", class: "fieldForm__folder"
         .fieldForm
           = f.label :category, "カテゴリ"
           = f.collection_select :prefecture_id, Prefecture.all, :id, :name, {prompt: "選択して下さい"}, {class: "fieldForm__selector"}
         .fieldForm
           = f.label :brand, "ブランド"
-          = f.collection_select :prefecture_id, Prefecture.all, :id, :name, {prompt: "選択して下さい"}, {class: "fieldForm__selector"}
+          = f.collection_select :brand_id, Brand.all, :id, :name, {prompt: "選択して下さい"}, {class: "fieldForm__selector"}
         .fieldForm
           = f.label :size, "サイズ"
-          = f.text_field :phone_number, class: "fieldForm__input"
+          = f.text_field :phone_number, class: "fieldForm__size"
         .fieldForm
           = f.label :quantity, "個数"
-          = f.text_field :phone_number, class: "fieldForm__input"
+          = f.number_field :quantity, class: "fieldForm__quantity"
         .fieldForm
           = f.label :price, "商品価格"
-          = f.text_field :phone_number, class: "fieldForm__input"
+          = f.number_field :price, class: "fieldForm__price"
         .fieldForm
           = f.label :stock, "在庫あり/なし"
-          = f.text_field :phone_number, class: "fieldForm__input"
+          .radiobox
+            %label
+              = f.radio_button :stock, "true", class: "fieldForm__radio"
+              あり
+            %label.radio
+              = f.radio_button :stock, "false", class: "fieldForm__radio"
+              なし
         .update
           = f.submit "新規登録", class:"update__btn"
           %br/
