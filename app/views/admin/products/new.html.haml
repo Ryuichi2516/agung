@@ -4,28 +4,31 @@
   = render "modules/adminSidebar"
 
   .adminContent
-    %h2.title Sell ​​new
+    %h2.title 新規商品登録
     -# = render "users/shared/error_messages", resource: @DeliveryAddress
-    = form_with model: @DeliveryAddress, local: true do |f|
+    = form_with model: [ :admin, @product ], local: true do |f|
       .adminForm
         .fieldForm
           = f.label :file, "商品画像"
-          = f.text_field :postal_code, class: "fieldForm__images"
+          = f.fields_for :images do |i|
+            %label.label
+              %i.fa.fa-image
+              = i.file_field :file, multiple: true, name: "images[file][]", class: "fieldForm__images"
         .fieldForm
           = f.label :name, "商品名"
-          = f.text_field :city, class: "fieldForm__input"
+          = f.text_field :name, class: "fieldForm__input"
         .fieldForm
           = f.label :description, "商品コメント"
-          = f.text_area :city, size: "30x10", class: "fieldForm__folder"
-        .fieldForm
-          = f.label :category, "カテゴリ"
-          = f.collection_select :prefecture_id, Prefecture.all, :id, :name, {prompt: "選択して下さい"}, {class: "fieldForm__selector"}
+          = f.text_area :description, size: "30x10", class: "fieldForm__folder"
+        -# .fieldForm
+        -#   = f.label :category, "カテゴリ"
+        -#   = f.collection_select :prefecture_id, Prefecture.all, :id, :name, {prompt: "選択して下さい"}, {class: "fieldForm__selector"}
         .fieldForm
           = f.label :brand, "ブランド"
           = f.collection_select :brand_id, Brand.all, :id, :name, {prompt: "選択して下さい"}, {class: "fieldForm__selector"}
-        .fieldForm
-          = f.label :size, "サイズ"
-          = f.text_field :phone_number, class: "fieldForm__size"
+        -# .fieldForm
+        -#   = f.label :size, "サイズ"
+        -#   = f.text_field :size, class: "fieldForm__size"
         .fieldForm
           = f.label :quantity, "個数"
           = f.number_field :quantity, class: "fieldForm__quantity"
