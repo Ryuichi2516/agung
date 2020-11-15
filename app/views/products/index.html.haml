@@ -1,7 +1,7 @@
 = render "modules/header"
 
 .slider
-  - @products.each_with_index do |product, i|
+  - @RandomProducts.each_with_index do |product, i|
     .product
       = image_tag "#{product.images[0].file}", class: "product__img"
         
@@ -17,7 +17,7 @@
   %h2.main-title
     %span == NEW ARRIVAL ==
   .items
-    - @products.each_with_index do |product, i|
+    - @NewProducts.each_with_index do |product, i|
       .product
         = image_tag "#{product.images[0].file}", class: "product__img"
         .product__name
@@ -30,13 +30,13 @@
   %h2.main-title
     %span == STOCK ITEMS ==
   .items
-    - @stocks.each_with_index do |stock, i|
+    - @StockProducts.each_with_index do |product, i|
       .product
-        = image_tag "#{stock.images[0].file}", class: "product__img"
+        = image_tag "#{product.images[0].file}", class: "product__img"
         .product__name
-          = stock.name
+          = product.name
         .product__price
-          = "¥ #{stock.price.to_s(:delimited)}"
+          = "¥ #{product.price.to_s(:delimited)}"
   .all-more
     = link_to "MORE", "#", class: "all-more__btn"
 

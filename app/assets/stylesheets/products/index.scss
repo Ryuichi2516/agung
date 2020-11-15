@@ -2,11 +2,69 @@
   width: 1000px;
   margin: 0px auto;
   img {
-    height: 600px; //ポイント1
-    max-height: 600px; //ポイント2
-    min-height: 600px; //ポイント2
+    height: 600px;
+    max-height: 600px;
+    min-height: 600px;
     margin-top: 100px;
     width: 600px;
+  }
+}
+button{
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.slide-arrow{
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+}
+.prev-arrow{
+  left: -40px;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 15px solid #113463;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.next-arrow{
+  right: -40px;
+  width: 0;
+  height: 0;
+  border-right: 0 solid transparent;
+  border-left: 15px solid #113463;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.slide-dots{
+  text-align: center;
+  li{
+    display: inline-block;
+    margin: 0 15px;
+    button{
+      position: relative;
+      text-indent: -9999px;
+      &:before{
+        content: '○';
+        font-size: 30px;
+        text-indent: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    &.slick-active{
+      button:before{
+        content: '●';
+      }
+    }
   }
 }
 
