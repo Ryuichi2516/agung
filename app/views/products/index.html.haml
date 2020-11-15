@@ -13,71 +13,27 @@
 %main
   %h2.main-title
     %span == NEW ARRIVAL ==
-  .item-new
-    .item-new__first
-      画像
-      %p 商品名
-      %p 値段
-    %ul.item-new__arrival
-      %li
-        画像
-        %p 商品名
-        %p 値段
-      %li
-        画像
-        %p 商品名
-        %p 値段
-      %li
-        画像
-        %p 商品名
-        %p 値段
-      %li.break
-        画像
-        %p 商品名
-        %p 値段
-      %li
-        画像
-        %p 商品名
-        %p 値段
-      %li
-        画像
-        %p 商品名
-        %p 値段
+  .items
+    - @products.each_with_index do |product, i|
+      .product
+        = image_tag "#{product.images[0].file}", class: "product__img"
+        .product__name
+          = product.name
+        .product__price
+          = "¥ #{product.price.to_s(:delimited)}"
   .all-more
     = link_to "ALL ITEM", "#", class: "all-more__btn"
 
   %h2.main-title
     %span == STOCK ITEMS ==
-  .item-new
-    .item-new__first
-      画像
-      %p 商品名
-      %p 値段
-    %ul.item-new__arrival
-      %li
-        画像
-        %p 商品名
-        %p 値段
-      %li
-        画像
-        %p 商品名
-        %p 値段
-      %li
-        画像
-        %p 商品名
-        %p 値段
-      %li.break
-        画像
-        %p 商品名
-        %p 値段
-      %li
-        画像
-        %p 商品名
-        %p 値段
-      %li
-        画像
-        %p 商品名
-        %p 値段
+  .items
+    - @stocks.each_with_index do |stock, i|
+      .product
+        = image_tag "#{stock.images[0].file}", class: "product__img"
+        .product__name
+          = stock.name
+        .product__price
+          = "¥ #{stock.price.to_s(:delimited)}"
   .all-more
     = link_to "MORE", "#", class: "all-more__btn"
 

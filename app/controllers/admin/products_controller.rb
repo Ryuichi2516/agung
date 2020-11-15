@@ -10,7 +10,7 @@ class Admin::ProductsController < ApplicationController
     if @product.save
       if params[:images].present?
         params[:images][:file].each do |image|
-          @image = @product.images.create!(file: image, product_id:@product.id)
+          @product.images.create!(file: image, product_id:@product.id)
         end
         redirect_to root_path and return
       end

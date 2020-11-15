@@ -41,11 +41,11 @@ ActiveRecord::Schema.define(version: 2020_11_03_045201) do
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.text "description", null: false
-    t.integer "price", null: false
-    t.integer "quantity", null: false
-    t.bigint "brand_id", null: false
-    t.boolean "stock", default: false, null: false
     t.bigint "category_id"
+    t.bigint "brand_id", null: false
+    t.integer "quantity", null: false
+    t.integer "price", null: false
+    t.boolean "stock", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["brand_id"], name: "index_products_on_brand_id"
