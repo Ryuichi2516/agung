@@ -1,7 +1,13 @@
-img {
-  width:100%;
-  height: 400px;
-  margin-top: 100px;
+.slider {
+  width: 1000px;
+  margin: 0px auto;
+  img {
+    height: 600px; //ポイント1
+    max-height: 600px; //ポイント2
+    min-height: 600px; //ポイント2
+    margin-top: 100px;
+    width: 600px;
+  }
 }
 
 .new-info {
@@ -23,12 +29,6 @@ main {
     grid-row-gap: 40px;
     grid-column-gap: 30px;
     margin-top: 50px;
-    &__first {
-      width: 500px;
-      height: 500px;
-      background-color: tomato;
-      border: black solid 2px;
-    }
     .product:nth-child(1) {
       grid-row: span 2; grid-column: span 2;
       height: 100%;
@@ -39,6 +39,7 @@ main {
     }
     .product {
       font-size: 12px;
+      font-family: 'YuGothic';
       &__img {
         margin-top: 0px;
         width: 100%;
