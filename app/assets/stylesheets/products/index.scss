@@ -30,7 +30,7 @@ button{
   width: 0;
   height: 0;
   border-left: 0 solid transparent;
-  border-right: 15px solid #113463;
+  border-right: 15px solid #000000;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
 }
@@ -39,7 +39,7 @@ button{
   width: 0;
   height: 0;
   border-right: 0 solid transparent;
-  border-left: 15px solid #113463;
+  border-left: 15px solid #000000;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
 }
@@ -53,7 +53,7 @@ button{
       text-indent: -9999px;
       &:before{
         content: '○';
-        font-size: 30px;
+        font-size: 20px;
         text-indent: 0px;
         position: absolute;
         top: 0;
@@ -98,6 +98,7 @@ main {
     .product {
       font-size: 12px;
       font-family: 'YuGothic';
+      box-shadow: 0 5px 15px 0 rgba(64, 64, 64, 0.5);
       &__img {
         margin-top: 0px;
         width: 100%;
