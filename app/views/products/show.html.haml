@@ -1,0 +1,20 @@
+= render "modules/header"
+
+.mainContents
+  .mainContents__left
+    画像
+  .mainContents__right
+    .productName 
+      = @product.name
+    .productPrice
+      = "¥#{@product.price.to_s(:delimited)}"
+    .cartForm
+    .productCode
+    .productDetail
+    .sizeGuide
+    
+
+
+
+
+= render "modules/footer"
