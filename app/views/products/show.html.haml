@@ -2,7 +2,14 @@
 
 .mainContents
   .mainContents__left
-    画像
+    .slider-for
+      - @product.images.each do |product|
+        .product
+          = image_tag "#{product.file}", class: "product__img"
+    .slider-nav
+      - @product.images.each do |product|
+        .product
+          = image_tag "#{product.file}", class: "product__img"
   .mainContents__right
     .productName 
       = @product.name
