@@ -10,6 +10,8 @@ $(document).on('turbolinks:load', function() {
     pauseOnHover: true,
     prevArrow: '<button class="slide-arrow prev-arrow"></button>',
     nextArrow: '<button class="slide-arrow next-arrow"></button>',
-    dotsClass: 'slide-dots'
+    dotsClass: 'slide-dots',
+    speed: 1000,
+    infinite: true,
   });
 });
