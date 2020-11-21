@@ -1,7 +1,35 @@
-// .mainContents {
-//   min-height: 600px;
-//   max-width: 800px;
-//   margin: 0px auto;
-//   padding-top: 150px;
-//   display: flex;
-// }
+.mainContents {
+  min-height: 600px;
+  margin: 0px auto;
+  padding: 150px 200px;
+  display: flex;
+}
+.slider-for {
+  width: 500px;
+  margin: 0px auto;
+  img {
+    height: 500px;
+    max-height: 500px;
+    min-height: 500px;
+    width: 500px;
+  }
+}
+.slider-nav {
+  width: 500px;
+  .slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .3;
+    }
+  .slick-current {
+    opacity: 1;
+  }
+  .slick-slide {
+    margin: 0 5px;
+  }
+  img {
+    height: 100px;
+    width: 100px;
+    max-height: 100px;
+    min-height: 100px;
+  }
+}

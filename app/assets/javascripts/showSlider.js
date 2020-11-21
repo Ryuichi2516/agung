@@ -7,11 +7,12 @@ $(document).on('turbolinks:load', function() {
     asNavFor: '.slider-nav'
   });
   $('.slider-nav').slick({
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     asNavFor: '.slider-for',
-    dots: true,
     centerMode: true,
-    focusOnSelect: true
+    focusOnSelect: true,
+    prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+    nextArrow: '<button class="slide-arrow next-arrow"></button>',
   });
 });
