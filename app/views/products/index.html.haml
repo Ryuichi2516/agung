@@ -4,7 +4,8 @@
   .full-screen.slider
     - @RandomProducts.each_with_index do |image, i|
       .product
-        = image_tag "#{image.images[0].file}", class: "product__img"
+        = link_to product_path(image.id), method: :get do
+          = image_tag "#{image.images[0].file}", class: "product__img"
 
 %info
   .new-info
@@ -20,7 +21,8 @@
   .items
     - @NewProducts.each_with_index do |product, i|
       .product
-        = image_tag "#{product.images[0].file}", class: "product__img"
+        = link_to product_path(product.id), method: :get do
+          = image_tag "#{product.images[0].file}", class: "product__img"
         .product__name
           = product.name
         .product__price
@@ -33,7 +35,8 @@
   .items
     - @StockProducts.each_with_index do |product, i|
       .product
-        = image_tag "#{product.images[0].file}", class: "product__img"
+        = link_to product_path(product.id), method: :get do
+          = image_tag "#{product.images[0].file}", class: "product__img"
         .product__name
           = product.name
         .product__price
@@ -44,5 +47,3 @@
 = render "modules/footer"
 
 .Inquiry-form
-
-

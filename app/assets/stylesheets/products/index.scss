@@ -114,6 +114,7 @@ main {
       font-family: 'YuGothic';
       box-shadow: 0 5px 15px 0 rgba(64, 64, 64, 0.5);
       &__img {
+        display: inline;
         margin-top: 0px;
         width: 100%;
         height: 200px;
