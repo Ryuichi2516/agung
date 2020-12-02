@@ -26,6 +26,9 @@
         .fieldForm
           = f.label :brand, "ブランド"
           = f.collection_select :brand_id, Brand.all, :id, :name, {prompt: "選択して下さい"}, {class: "fieldForm__selector"}
+        .fieldForm
+          = f.label :model_number, "型番"
+          = f.text_field :model_number, class: "fieldForm__input"
         -# .fieldForm
         -#   = f.label :size, "サイズ"
         -#   = f.text_field :size, class: "fieldForm__size"
